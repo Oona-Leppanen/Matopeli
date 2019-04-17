@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 public class Matopeli {
 	
+	public final static int WIDTH = 600, HEIGHT = 400; //ruudun koko
+	
 	public Matopeli() {
 		
 	}
@@ -20,6 +22,12 @@ public class Matopeli {
 	public static void main(String[] args) {
 		
 		Matopeli matopeli = new Matopeli();
+		JFrame naytto= new JFrame("Matopeli");
+		naytto.setSize(WIDTH, HEIGHT);
+		naytto.setResizable(false);
+		naytto.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		naytto.setLocationRelativeTo(null);
+		naytto.setVisible(true);
 		
 	}
 
