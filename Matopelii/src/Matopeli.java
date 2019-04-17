@@ -13,7 +13,13 @@ import java.util.ArrayList;
 
 public class Matopeli {
 	
+	public Matopeli() {
+		
+	}
+	
 	public static void main(String[] args) {
+		
+		Matopeli matopeli = new Matopeli();
 		
 	}
 
