@@ -22,12 +22,12 @@ public class Matopeli {
 	public static void main(String[] args) {
 		
 		Matopeli matopeli = new Matopeli();
-		JFrame naytto= new JFrame("Matopeli");
-		naytto.setSize(WIDTH, HEIGHT);
-		naytto.setResizable(false);
-		naytto.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		naytto.setLocationRelativeTo(null);
-		naytto.setVisible(true);
+		JFrame naytto= new JFrame("Matopeli"); //Uusi näyttö, missä matopeli tulee näkymään
+		naytto.setSize(WIDTH, HEIGHT); //Näytön koko
+		naytto.setResizable(false); //Pystyykö näytön kokoa suurentamaan vai ei, tässä: ei
+		naytto.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Ohjelma lakkaa pyörimästä, kun ruutu suljetaan
+		naytto.setLocationRelativeTo(null); //Missä kohtaa tietokoneen ruutua matopelinäyttö avautuu
+		naytto.setVisible(true); //Tämä tulee olla kommenon jälkeen, joka piirtää näytölle, muuten piiretyt asiat eivät välttämättä tule näkyviin.
 		
 	}
 
