@@ -83,7 +83,7 @@ public class Snake implements ActionListener, KeyListener{
 				
 			}
 			for(Point point : matoosat) { //Jos mato osuu itseensä
-				if (point.equals(head)) {
+				if (point.equals(head) && (!point.equals(matoosat.get(0)) || hantaPituus<2)) {
 					peliOhi=true;
 				}
 			}
