@@ -6,14 +6,25 @@ import java.awt.Point;
 
 import javax.swing.JPanel;
 
+/**
+ *RenderPanel-luok
+ * 
+ * 
+ *
+ */
+
 @SuppressWarnings("serial")
 public class RenderPanel extends JPanel{
 	
 	public static Color matovari = new Color(255, 49, 243);
 	public static Color omenavari = new Color(51, 255, 236);
 	
+	/**
+	 *PaintComponent-metodilla maalataan kaikki (mato, omena, tausta, teksti)
+	 *tarkistaa for-loopilla madon sijainnin madon maalausta varten
+	 */
 	@Override
-	protected void paintComponent(Graphics g) { //Maalataan kaikki (mato, omena, tausta, teksti)
+	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.setColor(Color.BLACK);
 		g.fillRect(0, 0, 400, 340);
@@ -34,8 +45,6 @@ public class RenderPanel extends JPanel{
 		if (snake.score >=12*12) {
 			g.drawString("You win!", 290, 140);
 		}
-		
-		//System.out.println("yay"); //<-Testi, jotta timeri toimii oikein.
 		
 	}
 	
