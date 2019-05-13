@@ -11,6 +11,12 @@ import java.util.Random;
 import javax.swing.JFrame;
 import javax.swing.Timer;
 
+/**
+ * @author Oona Leppänen & Amy Nymalm
+ *
+ * pääluokka
+ * 
+ */
 public class Snake implements ActionListener, KeyListener{
 	
 	public JFrame naytto;
@@ -25,7 +31,10 @@ public class Snake implements ActionListener, KeyListener{
 	public static final char UP = 'u', DOWN = 'd', LEFT = 'l', RIGHT = 'r';
 	public boolean peliOhi = true;
 	
-	
+	/**
+	 * matopelin kostruktori
+	 * 
+	 */
 	public Snake() {
 		naytto = new JFrame("Matopeli");
 		naytto.setVisible(true);
@@ -39,12 +48,18 @@ public class Snake implements ActionListener, KeyListener{
 		timer.start();
 		
 	}
-	
+	/**
+	 * main-metodi
+	 */
 	public static void main(String[] args) {
 		matopeli = new Snake();
 	}
 
-	@Override
+	/**
+	 * actionPerformed-metodi
+	 * muuttaa matopelissä oleellisilla UP, DOWN, LEFT ja RIGHT chareilla madon liikettä.
+	 * 
+	 */
 	public void actionPerformed(ActionEvent e) {
 		renderPanel.repaint();
 		aikayksikko++; //Mato ei liiku eteenpäin joka timerin aikayksiköllä, vaan vain joka viidennellä, johon aikayksikkö inttiä tarvitaan
@@ -89,8 +104,11 @@ public class Snake implements ActionListener, KeyListener{
 			}
 		}
 	}
-	
-	public boolean onkoMadolla() { //funktio joka tarkastaa voiko omena tulla esiin aikomassaan paikassa.
+	/**
+	 * onkoMadolla funktio, joka tarkastaa voiko omena tulla esiin aikomassaan paikassa.
+	 * @return true, jos omena on madolla, ja sitä on siirrettävä. False, jos omena ei ole madolla, tilanne ok. 
+	 */
+	public boolean onkoMadolla() {
 		for (int i=0; i<matoosat.size(); i++) {
 			if (omena.equals(matoosat.get(i))) {
 				omena.setLocation(new Random().nextInt(12),new Random().nextInt(12));								
@@ -99,14 +117,14 @@ public class Snake implements ActionListener, KeyListener{
 		}
 		return false;
 	}
-
-	@Override
-	public void keyTyped(KeyEvent e) {//Tällä ei tee mitään, mutta on pakko olla.
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void keyPressed(KeyEvent e) { //Saadaan näppäimistö toimimaan
+    
+    /**
+     * KeyListener luokan metodi, joka rekisteröi näppäimistön painallukset.
+     * Oleelliset näppäimet ovat nuolinäppäimet ja välilyönti.
+     * metodi muuttaa direction-charin arvoa riippuen siitä, mitä nuolinäppäintä painaa.
+     * Nuolinäppäimilä mato liikkuu ylös, alas jne. ja välilyönti aloittaa matopelin (myös uudelleen pelin loputtua).
+     */
+  	public void keyPressed(KeyEvent e) {
 		int keyCode = e.getKeyCode();
         if(keyCode == KeyEvent.VK_LEFT) {
         	direction = LEFT;
@@ -120,7 +138,7 @@ public class Snake implements ActionListener, KeyListener{
         if(keyCode == KeyEvent.VK_UP) {
         	direction = UP;
         }
-        if(peliOhi==true && keyCode == KeyEvent.VK_SPACE){ //Saadaan peli uudelleen käyntiin.
+        if(peliOhi==true && keyCode == KeyEvent.VK_SPACE){ 
         	score =0;
         	direction = DOWN;
         	matoosat.clear();
@@ -130,7 +148,16 @@ public class Snake implements ActionListener, KeyListener{
         }
 	}
 
-	@Override
+    /**
+     *  Valmis KeyTyped, jolla matopeli-koodissa ei tee mitään
+     */
+	public void keyTyped(KeyEvent e) {//Tällä ei tee mitään, mutta on pakko olla.
+		// TODO Auto-generated method stub
+		
+	}
+    /**
+     * Valmis KeyRealesed, jolla matopeli-koodissa ei tee mitään
+     */
 	public void keyReleased(KeyEvent e) {//Tällä ei tee mitää, mutta on pakko olla
 		// TODO Auto-generated method stub
 		
