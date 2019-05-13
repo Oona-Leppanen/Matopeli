@@ -57,7 +57,9 @@ public class Snake implements ActionListener, KeyListener{
 
 	/**
 	 * actionPerformed-metodi
-	 * muuttaa matopelissä oleellisilla UP, DOWN, LEFT ja RIGHT chareilla madon liikettä.
+	 * muuttaa matopelissä oleellisilla UP, DOWN, LEFT ja RIGHT chareilla madon liikettä koordinaattien avulla.
+	 * arpoo ruualle uuden paikan
+	 * takastaa, kuoleeko mato
 	 * 
 	 */
 	public void actionPerformed(ActionEvent e) {
