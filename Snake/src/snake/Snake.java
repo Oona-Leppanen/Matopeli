@@ -33,7 +33,7 @@ public class Snake implements ActionListener, KeyListener{
 	
 	/**
 	 * matopelin kostruktori
-	 * 
+	 * Lisää JFramin, ja pitää matopeliä käynnissä Timer-luokan avulla
 	 */
 	public Snake() {
 		naytto = new JFrame("Matopeli");
