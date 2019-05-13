@@ -7,9 +7,7 @@ import java.awt.Point;
 import javax.swing.JPanel;
 
 /**
- *RenderPanel-luok
- * 
- * 
+ *RenderPanel-luokka
  *
  */
 
