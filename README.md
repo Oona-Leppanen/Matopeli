@@ -1,3 +1,5 @@
+Oona Leppänen & Amy Nymalm
+
 Matopeli
 
 Yksinkertainen matopeli, joka on toteutettu Javalla ja jossa on graafinen käyttöliittymä.
