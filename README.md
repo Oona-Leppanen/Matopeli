@@ -1,6 +1,16 @@
-Oona Leppänen & Amy Nymalm
 
-Matopeli
+Oona Leppänen oklepp@utu.fi
+Amy Nymalm aanyma@utu.fi
+
+In English
+######Snake game
+
+Simple snake game with GUI. Done using Java.
+
+####################################################################
+
+In Finnish
+######Matopeli
 
 Yksinkertainen matopeli, joka on toteutettu Javalla ja jossa on graafinen käyttöliittymä.
 Pelin jar-tiedoston voi ladata seuraavasta osoitteesta: https://gitlab.utu.fi/aanyma/snakematopeli/blob/master/Matopeli.jar 
