@@ -1,6 +1,8 @@
-
+Creators
 Oona Leppänen oklepp@utu.fi
 Amy Nymalm aanyma@utu.fi
+
+####################################################################
 
 In English
 Snake game
