@@ -1,10 +1,13 @@
-Creators
+Creators:
+
 Oona Leppänen oklepp@utu.fi
+
 Amy Nymalm aanyma@utu.fi
 
 ####################################################################
 
 In English
+
 Snake game
 
 Simple snake game with GUI. Done using Java.
@@ -12,6 +15,7 @@ Simple snake game with GUI. Done using Java.
 ####################################################################
 
 In Finnish
+
 Matopeli
 
 Yksinkertainen matopeli, joka on toteutettu Javalla ja jossa on graafinen käyttöliittymä.
